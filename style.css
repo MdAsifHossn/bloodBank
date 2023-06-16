@@ -1,0 +1,477 @@
+body {
+    background-color: aquamarine;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* -------Navber------- */
+.navContainer {
+    background-color: aqua;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50px;
+}
+.navLogo {
+    background-color: aliceblue;
+    font-size: 25px;
+    font-weight: bold;
+    width: 120px;
+    border-radius: 10px;
+    color: red;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navItems {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+#check,
+.navMenuBtn {
+    display: none;
+}
+.navContainer>.navItems>li>a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    border-bottom: 2.5px solid white;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+@media only screen and (max-width:800px) {
+    .navContainer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .navMenuBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+        color: white;
+        font-weight: bold;
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: 30px;
+    }
+    #check:checked~.navMenuBtn {
+        background-color: aliceblue;
+        color: red;
+    }
+    .navItems {
+        background-color: thistle;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: fixed;
+        top: 54px;
+        width: 200px;
+        height: 100vh;
+        right: -100%;
+        transition: 0.3s;
+    }
+    #check:checked~.navItems {
+        right: 0px;
+        transition: 0.3s;
+    }
+    .navContainer>.navItems>li {
+        margin-top: 30px;
+    }
+}
+
+/* ----About Page---- */
+.aboutUsTitle {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.aboutUsContainer {
+    width: 960px;
+    margin: auto;
+    padding-top: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+.card {
+    height: 420px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cardInfo>p {
+    margin: 7px;
+    font-size: 20px;
+}
+.name {
+    font-weight: bold;
+    font-size: 22px;
+}
+.uniName {
+    font-size: 21px;
+}
+@media only screen and (max-width:1100px){
+    .aboutUsContainer {
+        grid-template-columns: 1fr 1fr;
+        width: 630px;
+        margin: auto;
+    }
+}
+@media only screen and (max-width:750px){
+    .aboutUsContainer {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* ----Home Page---- */
+
+.searchArea {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#bloodSearchBox,
+#districtSearchBox {
+    width: 250px;
+    height: 30px;
+    margin: 10px 0px 2px 2px;
+    border-radius: 5px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;    
+}
+#bloodSearchBox:focus,
+#districtSearchBox:focus {
+    outline: 2.2px solid blue;
+}
+.sortBox {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0px;
+}
+.sortBox>label {
+    margin-right: 10px;
+}
+.searchBtnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchBtn {
+    width: 200px;
+    height: 30px;
+    background-color: #f54500;
+    color: #fff;
+    border: 0ch;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+    transition: 0.3s;
+}
+#searchBtn:hover {
+    width: 220px;
+    height: 30px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+.userCard {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.userCard>.card {
+    background-color: aqua;
+    margin: 15px 20px;
+    box-shadow: rgba(0, 0, 0, 0.6) 10px 10px 15px;
+    width: 260px;
+    height: auto;
+    padding: 10px;
+    font-size: 17px;
+}
+.userCard>.card>p {
+    margin: 7px;
+}
+.bgBlood {
+    background-color: #fff;
+    padding: 2px 70px;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+/* -----Login Page----- */
+
+.loginContainer {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginForm {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px solid rgb(19, 180, 159);
+}
+.legend {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.attribute {
+    font-size: 20px;
+    float: left;
+    margin-top: 5px;
+}
+.inputField {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    height: 30px;
+    width: 270px;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, .6) 0px 5px 15px;
+}
+.inputField:focus {
+    outline: 1px solid rgb(19, 180, 159);
+}
+.loginBtn {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    font-size: 19px;
+    border: 0px;
+    border-radius: 4px;
+    height: 32px;
+    width: 274px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, .6) 0px 5px 15px;
+}
+.loginBtn:hover {
+    background-color: aliceblue;
+    color: rgb(19, 180, 159);
+    border: 1px solid rgb(19, 180, 159);
+}
+.forgetPassword {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+.forgetPassword:hover {
+    color: rgb(19, 180, 159);
+}
+.createAccount {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+.createAccount:hover {
+    color: rgb(19, 180, 159); 
+}
+.loginForm>hr {
+    border: 0px;
+    height: 2px;
+    background-color: rgb(19, 180, 159);
+    margin: 10px auto;
+}
+
+/* ------Register Page----- */
+.registerContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registerForm {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; 
+    border: 2px solid rgb(19, 180, 159);
+}
+#blood,
+#bloodDonor,
+#district {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #fff;
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 274px;
+    height: 32px;
+    border-radius: 4px;
+    border: 0px;
+    box-shadow: rgba(0, 0, 0, .6) 0px 5px 15px;
+}
+
+#blood:focus,
+#bloodDonor:focus,
+#district:focus {
+    outline: 1px solid rgb(19, 180, 159);
+}
+#address {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    width: 274px;
+    border: 0px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#address:focus {
+    outline: 2.2px solid rgb(19, 180, 159);
+}
+.registerBtn {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    width: 274px;
+    height: 35px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.registerBtn:hover {
+    font-size: 19px;
+    background-color: aliceblue;
+    color: rgb(19, 180, 159);
+    border: 1px solid rgb(19, 180, 159);
+}
+.backToLogin {
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+.backToLogin:hover {
+    color: rgb(19, 180, 159); 
+}
+
+/*-----Modify Page---- */
+.modifyContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-top: 60px;
+}
+.modifyForm {
+    margin: auto;
+    margin-top: 20px;
+    width: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.modifyContent {
+    margin-top: 10px;
+}
+.modifyBtn {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    width: 274px;
+    height: 35px;
+    margin-top: 0px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.modifyBtn:hover {
+    font-size: 19px;
+    background-color: aliceblue;
+    color: rgb(19, 180, 159);
+    border: 1px solid rgb(19, 180, 159);
+}
+@media only screen and (max-width:670px){
+    .modifyForm {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .modifyContainer>legend {
+        margin-bottom: 0px;
+    }
+}
+
+/* -----Profile----- */
+
+.profileContainer {
+    width: 650px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.profileContent {
+    width: 250px;
+    margin: 15px 25px;
+}
+.profileContent>p {
+    margin: 0px;
+    text-align: center;
+    font-size: 18px;
+}
+.profileContent>h2 {
+    text-align: center;
+    margin: 0px auto 7px auto;
+    border-bottom: 2px solid rgb(19, 180, 159);
+    width: 60%;   
+}
+.deleteBtnContainer {
+    display: flex;
+    justify-content: center;
+}
+#deleteBtn {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    height: 35px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #f00;
+    background-color: #fff;
+    color: #f00;
+    box-shadow: rgba(0, 0, 0, .5) 0px 5px 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#deleteBtn:hover {
+    font-size: 19px;
+    background-color: aliceblue;
+    transition: 0.3s;
+}
+@media only screen and (max-width:700px){
+    .profileContainer {
+        width: 100%;
+        padding: 20px 0px;
+    }
+}
